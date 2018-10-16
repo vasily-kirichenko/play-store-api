@@ -720,10 +720,29 @@ message Unknown25Item {
 message Unknown25Container {
   optional string value = 2;
 }
+message Warning {
+  optional string localizedMessage = 1;
+}
 message RelatedLinks {
+  optional RelatedLink sectionRelated = 1;
+  optional RelatedLink sectionMoreBy = 2;
+  optional PlusOneData plusOneData = 3;
+  repeated Warning warning = 4;
+  optional RelatedLink sectionBodyOfWork = 5;
+  optional RelatedLink sectionCoreContent = 6;
+  repeated Badge badgeForCreator = 8;
+  repeated Badge badgeForDoc = 9;
   optional RelatedLinksUnknown1 unknown1 = 10;
+  optional RelatedLink sectionCrossSell = 11;
+  optional RelatedLink sectionRelatedDocType = 12;
+  optional string offerNote = 14;
+  repeated DocV2 subscription = 16;
   optional string privacyPolicyUrl = 18;
+  optional Warning optimalDeviceClassWarning = 20;
+  optional RelatedLink sectionSuggestForRating = 22;
+  optional RelatedLink sectionRateAndReview = 23;
   optional RelatedLink youMightAlsoLike = 24;
+  optional DocV2 creatorDoc = 26;
   optional Rated rated = 29;
   repeated RelatedLink relatedLinks = 34;
   optional CategoryInfo categoryInfo = 53;
